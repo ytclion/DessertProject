@@ -1,0 +1,124 @@
+h1{
+    font-weight:bolder;
+    align-items: flex-start;
+    color:#009FCC; 
+}
+
+hr{
+    border-top: 2px solid #CCEEFF;
+
+}
+
+.myself{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    background-color: rgba(255, 255, 187, 0.637);
+    flex-flow: nowrap;
+    background-image:url(../image/congruent_pentagon.png);
+}
+
+.picture,
+.title{
+    /* display: flex; */
+    display: inline-block;
+    /* justify-content: flex-start; */
+    padding: 10px;
+    color:#4400CC;
+    height: auto;
+}
+.bigger{
+    transform-origin(0,0);
+    transition: all 0.1s ease-out;
+}
+.bigger i {
+    width: 25px;
+    text-align: center;
+}
+.bigger:hover{
+    transform:scale(1.1,1.1);
+}
+img{
+    width: 200px;
+    max-height: auto;
+    display:flex;
+}
+
+.title ul{
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+main{
+    margin:10px;
+    padding:10px;
+}
+
+h2{color:#009FCC;
+margin-bottom: 0px;
+}
+
+.h2_professional{
+    margin:30px 0px 30px 0px;
+}
+
+.skillsbox{
+    justify-content:space-between;
+    display: flex;
+}
+
+.skillsbox ul{
+    margin:10px 0px;
+    padding:10px 0px;
+    width: 30%;
+    height: 200px;
+    vertical-align: top;
+    height:auto;
+}
+
+li{
+    margin: 0 0 0 30px;
+    width:auto;
+}
+
+h3{
+    margin:0px;
+    font-weight: 400;
+    position: relative;
+    bottom:15px;
+}
+
+
+.timeline ul {
+    margin: 0px;
+    padding:0px 0px 50px 30px;
+    position: relative;
+    border-left :2px solid rgb(174, 227, 253);
+}
+
+.timeline ul::before{
+    content:"";
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:3px solid rgb(168, 223, 250)	;
+    position:absolute;
+    background-color:white;
+    top:0px;
+    left:-9px;
+}
+
+@media(max-width:768px) {
+    .skillsbox {
+        flex-wrap: wrap;
+    }
+    .skillsbox ul {
+        width: 40%;
+    }
+}
+
+@media(max-width:414px) {
+    .skillsbox ul {
+        width: 100%;
+    }
+}

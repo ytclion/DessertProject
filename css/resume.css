@@ -1,0 +1,89 @@
+h1{
+    font-weight:bolder;
+    align-items: flex-start;
+    color:#BBBB00; 
+}
+
+hr{
+    border-top: 2px solid rgb(217, 245, 106);
+
+}
+
+.lefttoright{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 187, 0.637);
+    flex-flow: nowrap;
+}
+
+.picture,
+.title{
+    display: flex;
+    padding: 10px;
+    color:#888800;
+    height: auto;
+}
+
+.title ul{
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+main{
+    margin:10px;
+    padding:10px;
+}
+
+h2{color:#BBBB00;
+margin-bottom: 0%;
+}
+
+.h2_professional{
+    margin:30px 0px 30px 0px;
+}
+
+.skillsbox{
+    justify-content:space-between;
+    display: flex;
+}
+
+.skillsbox ul{
+    /* display: inline-block; */
+    margin:10px 0px;
+    padding:10px 0px;
+    width: 30%;
+    height: 200px;
+    vertical-align: top;
+    height:auto;
+}
+
+li{
+    margin: 0 0 0 30px;
+    width:auto;
+}
+
+h3{
+    margin:0px;
+    font-weight: 400;
+}
+
+.timeline ul {
+    margin: 0px;
+    padding:0px 0px 30px 30px;
+    position: relative;
+    border-left :2px solid#FFEE99; 
+}
+
+.timeline ul::before{
+    content:"";
+    /* display: :block; */
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    border:3px solid#FFDD55	;
+    position:absolute;
+    background-color:white;
+    top:10px;
+    left:-9px;
+}

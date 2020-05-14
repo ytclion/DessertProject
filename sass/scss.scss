@@ -1,0 +1,541 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/* 由此開始*/
+// *{
+// 	outline:1px solid red;
+// }
+
+body{
+	font-family:'Roboto', sans-serif;
+	max-width: 1920px;
+	background-color:#F2F2F2;
+}
+
+/* header區 */
+
+header{
+	background-color: rgba(120,40,180,1);
+	height: 90px;
+	font-family: "font78199";
+}
+
+
+#logo{
+    color:white;
+	text-decoration: none;
+	text-align: center;
+	font-size:36px;
+	padding: 25px 50px;
+	/* display:inline-block; */
+	float:left;
+}
+
+/* header--search區 */
+.searchbox{
+	border-bottom:2px solid white;
+	padding: 30px 0 5px 20px;
+	max-width: 350px;
+	margin:0 0 20px 320px;
+	
+}
+//搜尋的input
+#search{
+	background-color:rgba(120,40,180,1);
+	border:none;
+	font-size: 20px;
+}
+.searchbox ::-webkit-input-placeholder{
+	color:rgba(255, 255, 255,0.5);
+	font-style:italic;
+}
+
+#search:focus{outline:none;}
+
+.fa-search{
+	color:white;
+	padding-right:10px;
+}
+
+
+/* main區--menu */
+.menu{
+	// max-width: 300px;
+	min-width: 300px;
+	margin-left:20px;
+	background-color:#EBEBEB;
+	float:left;
+	box-sizing: border-box;
+	p{
+    font-size:25px;
+	font-weight: 700;
+	margin-bottom:15px;
+    }
+	
+}
+.menu > div{
+	padding:10%;
+	border-top: 1px solid #D7D7D7;
+	width: 80%;
+	margin:0;
+}
+
+
+
+
+#location{
+	width: 100%;
+	height: 40px;
+	border:none;
+	border-radius: 3px;
+
+}
+.date-box {
+	label[for="to"],
+	label[for="from"]{
+	display:inline-block;
+	width: 21%;
+	text-align: center;
+    }
+   #from,#to{
+        width: 77%;
+        height: 40px;
+        border:none;
+        border-radius: 3px;
+        margin-bottom:7px;
+		padding-left:5px;
+		box-sizing: border-box;
+    }
+}
+
+
+.categories-box
+	[type="checkbox"]:checked + label span
+	{
+	background-image: url('../image_W3RWD/check.png');
+	}
+
+.categories-box{
+    div{
+        margin:5px 0;
+	}
+    span{
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        border-radius: 2px;
+        margin-right:3px;
+	}
+	label,span{
+	cursor: pointer;
+	
+	}
+	input{
+		display:none;
+	}
+}
+#date-button,
+#location-button,
+#categories-button{
+	display:none;
+}
+
+/* main-content區 */
+
+.content{
+	margin-left:320px;
+	padding:20px 0 0 30px;
+
+}
+// 結果小結論區 
+.result-summary span{
+	font-size:24px;
+	font-weight:700;
+	margin:3px;
+}
+.result-number{
+	color:#9013FE;
+}
+.button button{
+	border-radius: 100px;
+	color:#9013FE;
+	border:1px solid #9013FE;
+	margin:10px 10px 0 0;
+	padding:5px 15px;
+	background-color: #F2F2F2;
+	font-style: italic;
+}
+.far {
+	padding:0 6px;
+}
+
+/* content 結果清單區 */
+.result-list{
+	padding-top:30px;
+	width: 95%;
+}
+.picture{
+width: 220px;
+height: 220px;
+float:left;
+overflow:hidden;
+}
+.result-detail{
+	background-color:#FFFFFF;
+	margin-bottom:25px;
+	margin-left:220px;
+	height: 220px;
+}
+.result-list {
+	h3{
+	color:#9013FE;
+	font-size:24px;
+	font-weight:700;
+	padding:33px 18px 24px 18px;
+	}
+    p{
+	height: 32px;
+	overflow: hidden;
+	padding:0 18px;
+	margin-bottom:15px;
+	}
+	span{
+		font-weight:700;
+		margin:0 19px;
+	}
+}
+.result-detail button{
+color:white;
+background-color:#D7D7D7;
+border-radius:20px;
+border:none;
+height: 24px;
+padding: 0 15px;
+
+}
+.tag{
+	color:#9B9B9B;
+	padding:20px 0 0 10px;
+	span{
+	margin-left:10px;
+	margin-bottom:10px;
+	display:inline-block;
+	font-weight: 400;
+	}
+	.far,.fas{
+		padding:0 3px;
+		color:black;
+	}
+}
+
+// footer
+footer ul{ 
+	padding:20px 52px 70px 0;
+	text-align: end;
+	
+	li{
+	margin:0 -1px;
+	display:inline-block;
+		a{
+		background-color: #FFFFFF;
+		padding:10px 15px;
+		color:#9013FE;
+		text-decoration: none;
+		border-radius:3px;
+		}
+		a:hover{
+		background-color: #9013FE;
+		color:#FFFFFF;
+		}
+	}
+}
+.currentpage{
+	background-color: #9013FE;
+		color:#FFFFFF;
+}
+/* media--header */
+
+
+
+
+//PC時隱藏選單RWD
+.date-box-RWD,
+.location-box-RWD,
+.categories-box-RWD{
+	display:none;
+}
+
+//480隱藏toggle的input
+#toggle-date,
+#toggle-location{
+	display:none;
+}
+
+@media(max-width:768px){
+	main{
+		max-width: 768px;
+	}
+	.content{
+		margin-left:300px;
+		max-width: 468px;
+	}
+	
+	.menu{
+		margin-left:0;
+	}
+
+	.picture{
+		width: 100%;
+		height: 200px;
+		float:none;
+	}
+
+	.result-detail{
+		margin-left:0;
+	}
+.tag{
+	padding:10px 0 0 10px;
+	span{
+		display:block;	
+	}
+	}
+}
+
+@media(max-width:480px)
+{
+	header{
+		height: 69px;
+	}
+	#logo{
+		display:block;
+		font-size:24px;
+		float:none;
+	}
+	.searchbox{
+		border-bottom:1px solid #9B9B9B;
+		padding: 5px 0 5px 20px;
+		width: 80%;
+		margin:10px auto 0 auto;
+		
+		
+	}
+	#search{
+		background-color:#F2F2F2;
+		font-size: 16px;
+
+	}
+	.searchbox ::-webkit-input-placeholder{
+		color:#9B9B9B;
+
+	}
+
+	.fa-search{
+		color:rgb(131, 131, 131);
+		padding:0 12px 0 0;
+
+	}
+	// 480-隱藏結果小結
+	.result-summary{
+		display:none;
+	}
+	.menu{
+		float:none;
+		margin:62px 0 0 0;
+		max-width:480px;
+		background-color:rgb(223, 221, 221);
+	}
+	.menu
+		>div{
+		position: relative;
+		padding:4% 7% 0 7%;
+		width:100%;
+		box-sizing: border-box;
+		border-bottom:1px solid rgb(202, 202, 202);
+		}
+
+		
+
+	.location-PC,
+	.date-PC,
+	.categories-PC{
+	display:none;
+	}
+
+
+//480選單---按出
+	label[for="toggle-location"],
+	label[for="toggle-date"],
+	label[for="toggle-categories"]{
+	width: 25px;
+	height: 5px;
+	display: inline-block;
+	background-color: rgb(143, 142, 142);
+	position: absolute;
+	right:30px;
+	top:27px;
+	border-radius: 5px;
+	}
+	label[for="toggle-location"]::before,
+	label[for="toggle-date"]::before,
+	label[for="toggle-categories"]::before{
+		content: "";
+		width: 25px;
+		height: 5px;
+		background-color:rgb(143, 142, 142);
+		position: absolute;
+		border-radius: 5px;
+		transform:rotate(90deg);
+		display: inline-block;
+	}
+	#toggle-location:checked~
+	label[for="toggle-location"]::before,
+	#toggle-date:checked~
+	label[for="toggle-date"]::before,
+	#toggle-categories:checked~
+	label[for="toggle-categories"]::before{
+	transform:translate(0, 0)rotate(0deg);
+	transition: 0.1s ease-in-out;
+	}
+
+	#toggle-location:checked~div,
+	#toggle-date:checked~div,
+	#toggle-categories:checked~div
+	{
+		display: block;
+
+	}
+
+	//480選單location樣式
+	.location-box-RWD{
+		margin-bottom:15px;
+	}
+	#location-RWD{
+		width: 100%;
+		height: 40px;
+		border:none;
+		border-radius: 3px;
+	}
+
+	//480選單date樣式
+	.date-box-RWD{
+		padding-bottom:5px;
+	}
+	.date-box-RWD div{
+	margin:0 0 15px 0;
+	}
+	label[for="from-RWD"],
+	label[for="to-RWD"]{
+		max-width: 100px;
+		line-height: 40px;
+		text-align: center;
+		width: 70px;
+	}
+	#from-RWD,#to-RWD{
+		width:80%;
+		height: 40px;
+		float:right;
+		border:none;
+		border-radius: 3px;
+	}
+	
+
+	//480選單categories樣式
+
+	.categories-box-RWD{
+		div{
+			margin:10px 5px;
+			display:inline-block;
+			width: 45%;
+		}
+		
+		label{
+		font-size:18px;
+		display:inline-block;
+		line-height: 40px;
+		border-radius: 15px;
+		background-color: rgb(189, 189, 189);
+		width: 100%;
+		text-align: center;
+		color:white;
+		}
+		#All-RWD:checked~label,
+		#Entertainment-RWD:checked~label,
+		#Food-RWD:checked~label,
+		#Learning-RWD:checked~label,
+		#Outdoors-RWD:checked~label{
+			background-color: #9013FE;
+		}
+	}
+
+
+
+	//480--內容
+	.content{
+		margin-left:0;
+		max-width: 480px;
+		padding:0;
+	}
+	.result-list{
+		padding:5%;
+		margin:0;
+		width: 90%;
+	}
+	//480--footer頁碼
+	footer ul{ 
+		padding:20px 0 50px 0;
+		text-align: center;
+	}
+}
+	
+
+// *{
+// 	outline:1px solid red;
+// }
